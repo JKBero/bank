@@ -43,7 +43,7 @@ the steps above
 | .withdraw(amount) | .credit(amount) | .new_transaction(amount, type, transaction_class) | |
 | .deposit(amount) | .debit(amount) | .print | |
 | .balance | .total | | |
-| .statement | | | |
+| .statement | | | |   
 
 ## Code style
 - OOP
@@ -65,5 +65,5 @@ the steps above
 ### Unit tests
 
 ## Versioning
-Ruby version 2.6.0.  
-To change ruby versions run ```rvm install ruby-2.6.0``` in your terminal.
+Ruby version 2.6.3.  
+To change ruby versions run ```rvm install ruby-2.6.3``` in your terminal.
