@@ -3,6 +3,7 @@ require 'account'
 describe Account do
 
   subject(:account) { Account.new }
+  let(:statement) { double :statement, print: "date || credit || debit || balance" }
 
   describe '#deposit' do
     it 'increases the balance by 5 when 5 is deposited' do
@@ -19,8 +20,8 @@ describe Account do
 
   describe '#statement' do
     it 'shows an empty account statement on first creation of account' do
-      statement = "date || credit || debit || balance"
-      expect(account.statement).to eq statement
+      result = "date || credit || debit || balance"
+      expect(account.statement).to eq result
     end
   end
 
