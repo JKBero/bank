@@ -14,4 +14,8 @@ class Account
     @balance -= amount
   end
 
+  def statement
+    return "date || credit || debit || balance"
+  end
+
 end
