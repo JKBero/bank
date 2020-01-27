@@ -1,5 +1,7 @@
 # Bank
 
+[![Build Status](https://travis-ci.com/jkbero/bank.svg?branch=master)](https://travis-ci.com/jkbero/bank)  
+
 [Quick start](#quick-start) | [My approach to solving the challenge](#my-approach-to-solving-the-challenge) |
 [Features](#features) | [Domain models](#domain-models) | [Code style](#code-style) |
 [Tech used](#tech-used) | [Tech coverage](#tech-coverage) | [Versioning](#versioning)

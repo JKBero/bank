@@ -1,7 +1,57 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/jbero/Projects/Week10/bank/spec/feature/user_can_view_balance_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        3,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/jbero/Projects/Week10/bank/lib/account.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/jbero/Projects/Week10/bank/spec/unit/account_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        3,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ]
     },
-    "timestamp": 1580136406
+    "timestamp": 1580138278
   }
 }
