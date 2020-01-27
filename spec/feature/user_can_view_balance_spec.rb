@@ -13,4 +13,12 @@ describe 'User can view their current balance' do
     expect(account.balance).to eq 5
   end
 
+  it 'shows 1 after 10 is deposited and 9 is withdrawn' do
+    account.deposit(10)
+    expect(account.balance).to eq 10
+
+    account.withdraw(9)
+    expect(account.balance).to eq 1
+  end
+
 end
