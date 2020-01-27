@@ -5,7 +5,7 @@
 [Tech used](#tech-used) | [Tech coverage](#tech-coverage) | [Versioning](#versioning)
 
 This software imitates a bank account, allowing the user to withdraw and deposit
-funds and read their bank statement.
+funds and read their bank statement. It is written in Ruby.
 
 ## Quick start
 
@@ -43,9 +43,9 @@ the steps above
 | .withdraw(amount) | .credit(amount) | .new_transaction(amount, type, transaction_class) | |
 | .deposit(amount) | .debit(amount) | .print | |
 | .balance | .total | | |
-| .statement | | | |
+| .statement | | | | 
 
-## Code style
+## Code style
 - OOP
 - TDD
 
