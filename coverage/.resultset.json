@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jbero/Projects/Week10/bank/spec/feature/user_can_view_account_statement_spec.rb": [
+      "/Users/jbero/Projects/Week10/bank/spec/feature/user_can_deposit_and_withdraw_funds_spec.rb": [
         1,
         null,
         1,
@@ -19,13 +19,11 @@
         1,
         null,
         1,
-        null,
-        1,
-        8,
+        5,
         null,
         null,
         1,
-        4,
+        3,
         null,
         null,
         1,
@@ -38,26 +36,14 @@
         null,
         null
       ],
-      "/Users/jbero/Projects/Week10/bank/spec/feature/user_can_view_balance_spec.rb": [
+      "/Users/jbero/Projects/Week10/bank/spec/feature/user_can_view_account_statement_spec.rb": [
         1,
         null,
         1,
         null,
-        4,
+        2,
         null,
         1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
         1,
         1,
         null,
@@ -69,7 +55,7 @@
         null,
         1,
         null,
-        5,
+        4,
         null,
         1,
         1,
@@ -77,14 +63,6 @@
         null,
         null,
         null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
         1,
         1,
         1,
@@ -102,6 +80,6 @@
         null
       ]
     },
-    "timestamp": 1580139596
+    "timestamp": 1580142323
   }
 }
