@@ -26,7 +26,7 @@ describe Account do
   describe '#statement' do
     it 'shows an empty account statement on first creation of account' do
       result = "date || credit || debit || balance"
-      expect { account.statement }.to output(result).to_stdout
+      expect { account.statement }.to output(result + "\n").to_stdout
     end
   end
 
