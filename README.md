@@ -10,7 +10,7 @@ This software imitates a bank account, allowing the user to withdraw and deposit
 
 - Fork and clone this repository
 - Run ```bundle``` in your terminal
-- To run the tests, run ```rspec``` in your terminal. SimpleCov is included in these tests and will show a coverage percentage at bottom.
+- To run the tests, run ```rspec``` in your terminal. SimpleCov is included in these tests and will show a coverage percentage at the end.
 - To run the code linter, run ```rubocop``` in your terminal
 - To run the program in IRB, run ```irb -r ./lib/account.rb``` in your terminal. This will require the account.rb file, which in turn will automatically require the statement.rb and transaction.rb files.
 
@@ -42,30 +42,26 @@ As an edge case, I also considered if the user tried to withdraw an amount that 
 ## Features
 
 ```
-2.6.3 :001 > require 'date'  
- => true  
-
-2.6.3 :002 > my_account = Account.new   # create a new account  
+2.6.3 :001 > my_account = Account.new   # create a new account  
  => #<Account:0x00007f92808ca478 @balance=0, @statement=#<Statement:0x00007f92808c9fc8 @transactions=[]>, @overdrawn_error="You do not have enough funds to withdraw this amount.">  
 
-2.6.3 :003 > my_account.deposit(200)    # deposit funds into the account  
+2.6.3 :002 > my_account.deposit(200)    # deposit funds into the account  
  => 200  
 
-2.6.3 :004 > my_account.deposit(150)  
+2.6.3 :003 > my_account.deposit(150)  
  => 350  
 
-2.6.3 :005 > my_account.withdraw(130)   # withdraw funds from the account  
+2.6.3 :004 > my_account.withdraw(130)   # withdraw funds from the account  
  => 220  
 
-2.6.3 :006 > my_account.withdraw(250)   # cannot overdraw account; error will show  
+2.6.3 :005 > my_account.withdraw(250)   # cannot overdraw account; error will show  
  => "You do not have enough funds to withdraw this amount."  
 
-2.6.3 :007 > puts my_account.statement    # print the account statement  
+2.6.3 :006 > my_account.statement    # print the account statement  
 date || credit || debit || balance  
 28/01/2020 || || 130.00 || 220.00  
 28/01/2020 || 150.00 || || 350.00  
 28/01/2020 || 200.00 || || 200.00  
- => nil  
 ```
 
 ## Domain models
@@ -131,3 +127,13 @@ Statement
   - shows one transaction when account has been deposited into for the first time
   - shows two transactions in reverse chronological order
   - shows multiple transactions in reverse chronological order
+
+Transaction
+- a credit transaction
+  - has a date
+  - has a credit amount to 2 decimal places
+  - has a default debit amount of 0
+  - holds a current balance figure
+- a debit transaction
+  - has a default credit amount of 0
+  - has a debit amount to 2 decimal places
