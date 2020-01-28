@@ -1,3 +1,6 @@
+require 'statement'
+require 'transaction'
+
 class Account
 
   def initialize(statement_class = Statement)

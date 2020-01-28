@@ -7,7 +7,7 @@ class Statement
   def print
     result = "date || credit || debit || balance"
     @transactions.each { |t|
-      if t.credit
+      if t.credit != '0.00'
         result += "\n#{t.date} || #{t.credit} || || #{t.balance}"
       else
         result += "\n#{t.date} || || #{t.debit} || #{t.balance}"

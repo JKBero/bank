@@ -3,9 +3,9 @@ require 'statement'
 describe Statement do
 
   subject(:statement) { Statement.new }
-  let(:transaction) { double :transaction, date: '27/01/2019', credit: '100.00', debit: nil, balance: '100.00' }
-  let(:transaction2) { double :transaction, date: '28/01/2019', credit: nil, debit: '50.50', balance: '49.50' }
-  let(:transaction3) { double :transaction, date: '29/01/2019', credit: '200.00', debit: nil, balance: '249.50' }
+  let(:transaction) { double :transaction, date: '27/01/2019', credit: '100.00', debit: '0.00', balance: '100.00' }
+  let(:transaction2) { double :transaction, date: '28/01/2019', credit: '0.00', debit: '50.50', balance: '49.50' }
+  let(:transaction3) { double :transaction, date: '29/01/2019', credit: '200.00', debit: '0.00', balance: '249.50' }
 
   describe '#print' do
 
