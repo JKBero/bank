@@ -18,7 +18,7 @@ class Account
 
   def withdraw(amount, transaction_class = Transaction)
     return @overdrawn_error if overdrawn?(amount)
-    
+
     @balance -= amount
     transaction = transaction_class.new(balance: @balance, debit: amount)
     @statement.add(transaction)

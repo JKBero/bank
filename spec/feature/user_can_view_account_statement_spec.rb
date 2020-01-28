@@ -3,7 +3,7 @@ describe 'User can view their account statement' do
   subject(:account) { Account.new }
 
   before do
-    allow(Date).to receive(:today) { Date.new(2019, 27, 01) }
+    allow(Date).to receive(:today) { Date.new(2019, 1, 27) }
   end
 
   it 'shows an empty statement when account is brand new' do
@@ -12,7 +12,6 @@ describe 'User can view their account statement' do
   end
 
   it 'shows one transaction after first deposit into account' do
-    allow(Date).to receive(:today) { Date.new(2019, 1, 27) }
     account.deposit(100)
     headers = "date || credit || debit || balance"
     transaction = "27/01/2019 || 100.00 || || 100.00"
@@ -21,7 +20,6 @@ describe 'User can view their account statement' do
   end
 
   it 'shows two transactions after a deposit and then withdrawal' do
-    allow(Date).to receive(:today) { Date.new(2019, 1, 27) }
     account.deposit(100)
 
     allow(Date).to receive(:today) { Date.new(2019, 1, 30) }
@@ -35,7 +33,6 @@ describe 'User can view their account statement' do
   end
 
   it 'shows multiple transactions after several deposits and withdrawals' do
-    allow(Date).to receive(:today) { Date.new(2019, 1, 27) }
     account.deposit(100)
 
     allow(Date).to receive(:today) { Date.new(2019, 1, 30) }

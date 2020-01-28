@@ -19,7 +19,7 @@ describe Account do
 
     it 'shows an error message if trying to withdraw below the 0 balance limit' do
       error = "You do not have enough funds to withdraw this amount."
-      expect(account.withdraw(10)).to eq error
+      expect(account.withdraw(1)).to eq error
     end
   end
 
