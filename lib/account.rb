@@ -26,7 +26,7 @@ class Account
   end
 
   def statement
-    @statement.print
+    print @statement.print
   end
 
   private
