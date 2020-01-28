@@ -68,6 +68,20 @@
         null,
         null
       ],
+      "/Users/jbero/Projects/Week10/bank/lib/transaction.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        23,
+        23,
+        23,
+        23,
+        null,
+        null,
+        null
+      ],
       "/Users/jbero/Projects/Week10/bank/lib/statement.rb": [
         1,
         null,
@@ -93,20 +107,6 @@
         null,
         5,
         null,
-        null,
-        null,
-        null
-      ],
-      "/Users/jbero/Projects/Week10/bank/lib/transaction.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        23,
-        23,
-        23,
-        23,
         null,
         null,
         null
@@ -278,6 +278,6 @@
         null
       ]
     },
-    "timestamp": 1580216064
+    "timestamp": 1580223438
   }
 }
