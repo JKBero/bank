@@ -6,18 +6,22 @@ class Statement
 
   def print
     result = "date || credit || debit || balance"
-    @transactions.each { |t|
-      if t.credit != '0.00'
-        result += "\n#{t.date} || #{t.credit} || || #{t.balance}"
-      else
-        result += "\n#{t.date} || || #{t.debit} || #{t.balance}"
-      end
-    }
+    @transactions.each { |t| result += view(t) }
     return result
   end
 
   def add(transaction)
     @transactions.unshift(transaction)
+  end
+
+  private
+
+  def view(transaction)
+    if transaction.credit != '0.00'
+      "\n#{transaction.date} || #{transaction.credit} || || #{transaction.balance}"
+    else
+      "\n#{transaction.date} || || #{transaction.debit} || #{transaction.balance}"
+    end
   end
 
 end
