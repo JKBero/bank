@@ -129,11 +129,11 @@ Statement
   - shows multiple transactions in reverse chronological order
 
 Transaction
+- has a date
+- holds a current balance figure
 - a credit transaction
-  - has a date
   - has a credit amount to 2 decimal places
   - has a default debit amount of 0
-  - holds a current balance figure
 - a debit transaction
   - has a default credit amount of 0
   - has a debit amount to 2 decimal places

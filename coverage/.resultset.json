@@ -282,8 +282,6 @@
       "/Users/jbero/Projects/Week10/bank/spec/unit/transaction_spec.rb": [
         1,
         null,
-        1,
-        null,
         5,
         null,
         1,
@@ -294,6 +292,8 @@
         1,
         1,
         null,
+        null,
+        1,
         null,
         1,
         1,
@@ -322,6 +322,6 @@
         null
       ]
     },
-    "timestamp": 1580236241
+    "timestamp": 1580236529
   }
 }
