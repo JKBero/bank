@@ -1,5 +1,5 @@
-require 'statement'
-require 'transaction'
+require_relative 'transaction'
+require_relative 'statement'
 
 class Account
 
