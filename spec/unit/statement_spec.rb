@@ -5,6 +5,7 @@ describe Statement do
   subject(:statement) { Statement.new }
   let(:transaction) { double :transaction, date: '27/01/2019', credit: '100.00', debit: nil, balance: '100.00' }
   let(:transaction2) { double :transaction, date: '28/01/2019', credit: nil, debit: '50.50', balance: '49.50' }
+  let(:transaction3) { double :transaction, date: '29/01/2019', credit: '200.00', debit: nil, balance: '249.50' }
 
   describe '#print' do
 
@@ -27,6 +28,17 @@ describe Statement do
       tran = "27/01/2019 || 100.00 || || 100.00"
       tran2 = "28/01/2019 || || 50.50 || 49.50"
       expect(statement.print).to eq headers + "\n" + tran2 + "\n" + tran
+    end
+
+    it 'shows multiple transactions in reverse chronological order' do
+      statement.add(transaction)
+      statement.add(transaction2)
+      statement.add(transaction3)
+      headers = "date || credit || debit || balance"
+      tran = "27/01/2019 || 100.00 || || 100.00"
+      tran2 = "28/01/2019 || || 50.50 || 49.50"
+      tran3 = "29/01/2019 || 200.00 || || 249.50"
+      expect(statement.print).to eq headers + "\n" + tran3 + "\n" + tran2 + "\n" + tran
     end
   end
 
