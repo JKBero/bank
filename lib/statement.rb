@@ -7,13 +7,17 @@ class Statement
   def print
     result = "date || credit || debit || balance"
     @transactions.each { |t|
-      result += "\n#{t.date} || #{t.credit} || #{t.debit} || #{t.balance}"
+      if t.credit
+        result += "\n#{t.date} || #{t.credit} || || #{t.balance}"
+      else
+        result += "\n#{t.date} || || #{t.debit} || #{t.balance}"
+      end
     }
     return result
   end
 
   def add(transaction)
-    @transactions << transaction
+    @transactions.unshift(transaction)
   end
 
 end
