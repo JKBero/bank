@@ -1,6 +1,3 @@
-require 'account'
-require 'statement'
-
 describe 'User can view their account statement' do
 
   subject(:account) { Account.new }

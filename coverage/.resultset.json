@@ -35,8 +35,9 @@
         1,
         null,
         1,
-        10,
-        10,
+        12,
+        12,
+        12,
         null,
         null,
         1,
@@ -47,6 +48,8 @@
         null,
         null,
         1,
+        11,
+        null,
         9,
         9,
         9,
@@ -57,13 +60,19 @@
         5,
         null,
         null,
+        1,
+        null,
+        1,
+        11,
+        null,
+        null,
         null
       ],
       "/Users/jbero/Projects/Week10/bank/lib/statement.rb": [
         1,
         null,
         1,
-        14,
+        16,
         null,
         null,
         1,
@@ -104,9 +113,6 @@
       ],
       "/Users/jbero/Projects/Week10/bank/spec/feature/user_can_view_account_statement_spec.rb": [
         1,
-        1,
-        null,
-        1,
         null,
         5,
         null,
@@ -166,12 +172,24 @@
         null,
         null
       ],
+      "/Users/jbero/Projects/Week10/bank/spec/feature/user_cannot_breach_0_balance_limit_spec.rb": [
+        1,
+        null,
+        2,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/jbero/Projects/Week10/bank/spec/unit/account_spec.rb": [
         1,
         null,
         1,
         null,
-        4,
+        5,
         1,
         null,
         1,
@@ -181,6 +199,11 @@
         null,
         null,
         1,
+        1,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         1,
@@ -244,6 +267,6 @@
         null
       ]
     },
-    "timestamp": 1580213818
+    "timestamp": 1580215106
   }
 }

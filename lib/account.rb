@@ -6,6 +6,7 @@ class Account
   def initialize(statement_class = Statement)
     @balance = 0
     @statement = statement_class.new
+    @overdrawn_error = "You do not have enough funds to withdraw this amount."
   end
 
   def deposit(amount, transaction_class = Transaction)
@@ -16,6 +17,8 @@ class Account
   end
 
   def withdraw(amount, transaction_class = Transaction)
+    return @overdrawn_error if overdrawn?(amount)
+    
     @balance -= amount
     transaction = transaction_class.new(balance: @balance, debit: amount)
     @statement.add(transaction)
@@ -24,6 +27,12 @@ class Account
 
   def statement
     @statement.print
+  end
+
+  private
+
+  def overdrawn?(amount)
+    amount > @balance
   end
 
 end
