@@ -10,8 +10,9 @@ This software imitates a bank account, allowing the user to withdraw and deposit
 
 - Fork and clone this repository
 - Run ```bundle``` in your terminal
-- To run the tests, run ```rspec``` in your terminal
-- To run the program in IRB, run ```irb -r ./lib/account.rb``` in your terminal. Then, in IRB, run ```require 'date'```.
+- To run the tests, run ```rspec``` in your terminal. SimpleCov is included in these tests and will show a coverage percentage at bottom.
+- To run the code linter, run ```rubocop``` in your terminal
+- To run the program in IRB, run ```irb -r ./lib/account.rb``` in your terminal. This will require the account.rb file, which in turn will automatically require the statement.rb and transaction.rb files.
 
 ## Versioning
 Ruby version 2.6.3.  
