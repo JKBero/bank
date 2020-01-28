@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/jkbero/bank.svg?branch=master)](https://travis-ci.com/jkbero/bank)  
 
-[Quick start](#quick-start) | [Versioning](#versioning) | [My approach](#my-approach) | [Code structure](#code-structure) | [Features](#features) | [Domain models](#domain-models) | [Code style](#code-style) | [Tech used](#tech-used) | [Tech coverage](#tech-coverage)
+[Quick start](#quick-start) | [Versioning](#versioning) | [My approach](#my-approach) | [Code structure](#code-structure) | [Features](#features) | [Domain models](#domain-models) | [Code style](#code-style) | [Tech used](#tech-used) | [Test coverage](#test-coverage)
 
 This software imitates a bank account, allowing the user to withdraw and deposit funds and read their bank statement. It is used in the terminal and is written in Ruby.
 
@@ -11,7 +11,7 @@ This software imitates a bank account, allowing the user to withdraw and deposit
 - Fork and clone this repository
 - Run ```bundle``` in your terminal
 - To run the tests, run ```rspec``` in your terminal
-- To run the programme in IRB, run ```irb -r ./lib/account.rb``` in your terminal. Then, in IRB, run ```require 'date'```.
+- To run the program in IRB, run ```irb -r ./lib/account.rb``` in your terminal. Then, in IRB, run ```require 'date'```.
 
 ## Versioning
 Ruby version 2.6.3.  
@@ -26,7 +26,7 @@ To change ruby versions run ```rvm install ruby-2.6.3``` in your terminal.
   - Write the code to pass
   - Refactor where required
 3. Run Rubocop before each commit to check code quality
-4. Once the core of the programme was complete, tackling edge cases repeating
+4. Once the core of the program was complete, tackling edge cases repeating
 the steps above  
 
 Along with Rubocop, SimpleCov was utilised to ensure high code coverage, and
@@ -44,22 +44,22 @@ As an edge case, I also considered if the user tried to withdraw an amount that 
 2.6.3 :001 > require 'date'  
  => true  
 
-2.6.3 :002 > my_account = Account.new # create a new account  
+2.6.3 :002 > my_account = Account.new   # create a new account  
  => #<Account:0x00007f92808ca478 @balance=0, @statement=#<Statement:0x00007f92808c9fc8 @transactions=[]>, @overdrawn_error="You do not have enough funds to withdraw this amount.">  
 
-2.6.3 :003 > my_account.deposit(200) # deposit funds into the account  
+2.6.3 :003 > my_account.deposit(200)    # deposit funds into the account  
  => 200  
 
 2.6.3 :004 > my_account.deposit(150)  
  => 350  
 
-2.6.3 :005 > my_account.withdraw(130) # withdraw funds from the account  
+2.6.3 :005 > my_account.withdraw(130)   # withdraw funds from the account  
  => 220  
 
-2.6.3 :006 > my_account.withdraw(250) # cannot overdraw account; error will show  
+2.6.3 :006 > my_account.withdraw(250)   # cannot overdraw account; error will show  
  => "You do not have enough funds to withdraw this amount."  
 
-2.6.3 :007 > puts my_account.statement # print the account statement  
+2.6.3 :007 > puts my_account.statement    # print the account statement  
 date || credit || debit || balance  
 28/01/2020 || || 130.00 || 220.00  
 28/01/2020 || 150.00 || || 350.00  
